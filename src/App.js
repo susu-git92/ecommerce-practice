@@ -1,25 +1,33 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Header from './Header'
+import Header from './Header';
+import Home from './Home';
+// import reducer, {initialState} from './reducer';
+// import { StateProvider } from './StateProvider';
+import Checkout from './Checkout';
+import Login from './Login';
 
 function App() {
   return (
     <Router>
-      <Header/>
-    <div className="App">
-      <Switch>
-        <Route path="/ceckout">
-          <h1>Checkout</h1>
-        </Route>
-        <Router path="/login">
-          <h1>Login page</h1>
-        </Router>
-        <Route path="/">
-          <h1>Home Page!!!</h1>
-        </Route>
-      </Switch>
-    </div>
+      {/* <StateProvider initialState={initialState} reducer={reducer}> */}
+        <div className="App">
+          <Switch>
+            <Route path="/checkout">
+              <Header/>
+              <Checkout />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/">
+              <Header/>
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+    {/* </StateProvider> */}
     </Router>
   );
 }

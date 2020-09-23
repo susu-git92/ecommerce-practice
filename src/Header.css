@@ -11,6 +11,19 @@
   margin-top: 18px;
 }
 
+.header_optionBasket {
+  display: flex;
+  align-items: center;
+  /* position: sticky;
+  top: 0;
+  z-index: 100; */
+}
+
+.header-basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .header_nav {
   display: flex;
   justify-content: space-evenly;
