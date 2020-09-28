@@ -1,13 +1,43 @@
 export const initialState = {
-  basket: [{
-    id: "2",
-    title: "New Drawing",
-    price: 598,
-    rating:4,
-    image: "https://d2ur7st6jjikze.cloudfront.net/share/thumbnail/thumbnail-11.jpg",
-  }], 
-  //[ "그림", "sonny" ] 여기 배열에 하나 들어오면 장바구니 카운트가 1,2 3 .. 올라감 
-  user: null,
+  product: [
+    {
+      id:"1",
+      title:"N55djsofjdsofo",
+      price:598,
+      rating:4,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTBqbbmtEvBlKvzCeA5jgJ-N5qWmhvgytBWUg&usqp=CAU",
+    },
+    {
+      id:"2",
+      title:"thssffe lean starㄹㄹt potential",
+      price:11.9,
+      rating:3,
+      image:"https://d2ur7st6jjikze.cloudfront.net/share/thumbnail/thumbnail-10.jpg",
+    },
+    {
+      id:"3",
+      title:"thssffe lean starㄹㄹt potential",
+      price:300,
+      rating:5,
+      image:"https://d2ur7st6jjikze.cloudfront.net/share/thumbnail/thumbnail-55.jpg",
+    },
+    {
+      id:"4",
+      title:"thssffe lean starㄹㄹt potential",
+      price:751,
+      rating:2,
+      image:"https://d2ur7st6jjikze.cloudfront.net/share/thumbnail/thumbnail-24.jpg",
+    },
+    {
+      id:"5",
+      title:"thssffe lean starㄹㄹt potential",
+      price:156,
+      rating:5,
+      image:"https://d2ur7st6jjikze.cloudfront.net/share/thumbnail/thumbnail-34.jpg",
+    },
+  ],
+  basket: [], 
+ 
 };
 
 export const getBasketTotal = (basket) =>
@@ -42,7 +72,6 @@ const reducer = (state, action) => {
               `can't remove product (id: ${action.id}) as its nothing`
             );
           }
-
         return { 
           ...state, 
           basket: newBasket }; 
