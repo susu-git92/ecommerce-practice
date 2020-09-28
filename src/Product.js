@@ -19,7 +19,6 @@ function Product ( ) {
       },
     });
   };
-  // dispatch({
   //   type: 'ADD_TO_BASKET',
   //   item: {
   //     id: id,
@@ -28,7 +27,7 @@ function Product ( ) {
   //     price: price,
   //     rating: rating,
   //   }
-  // })
+ 
 
   const handleFlagChange = (flag) => {
     setFlag(flag);
