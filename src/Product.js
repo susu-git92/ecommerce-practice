@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider';
-// import {Link} from 'react-router-dom'
 
 function Product ( ) {
   // const {products} = useState(StateContext);
-
    //{state}... {basket}
   const [state, dispatch] = useStateValue();
   const [flag, setFlag] = useState(true);
@@ -31,7 +29,6 @@ function Product ( ) {
   //     rating: rating,
   //   }
   // })
-
 
   const handleFlagChange = (flag) => {
     setFlag(flag);
@@ -68,7 +65,6 @@ function Product ( ) {
         </div>
         <img src={product.image} alt=""/>
         <button onClick= {() => addToBasket(product)}>Add To Basket</button>
-        
       </div>
       </div>
         ))
@@ -93,7 +89,6 @@ function Product ( ) {
         </div>
         <img src={product.image} alt=""/>
         <button onClick= {() => addToBasket(product)}>Add To Basket</button>
-        
       </div>
       </div>
       ))}
